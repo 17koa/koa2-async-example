@@ -25,6 +25,7 @@ app.use(views(__dirname + '/views', {
 
 // logger
 app.use((ctx, next) => {
+  console.log("...")
   const start = new Date();
   return next().then(() => {
     const ms = new Date() - start;
